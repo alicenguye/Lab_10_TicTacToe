@@ -12,10 +12,10 @@ public class Main {
     //		clearBoard();
     //		for (int i = 0; i < 9; i++)
     //		{
-    //			if (i = 1 || 3 || 5 || 7 || 9 ||)
+    //			if (i = 1 || 3 || 5 || 7 || 9 ||) // if number = 1,3,5,7,9
     //			{
     //				currentPlayer = " X "
-    //			else
+    //			else // if number = 0,2,4,6,8
     //			{
     //				currentPlayer = " O "
     //			}
@@ -29,17 +29,17 @@ public class Main {
     //
     //			numPlays += 1
     //
-    //			if (numPlays > 5)
+    //			if (numPlays > 5) // numPlays greater than 5
     //			{
     //				if (isWin)
     //				{
-    //					output "currentPlayer + " wins!"
+    //					output "currentPlayer + " wins!" // display 
     //				}
     //			else if (numPlays > 7)
     //			{
     //				if (isTie)
     //				{
-    //					output "It's a tie!"
+    //					output "It's a tie!" // display
     //				}
     //			}
     //
@@ -52,7 +52,9 @@ public class Main {
 
     public static void main(String[] args)
     {
+        // create new scanner
         Scanner in = new Scanner(System.in);
+        // declaratiton of variable 
         int row;
         int col;
         String Name1 = "Player 1";
@@ -66,10 +68,11 @@ public class Main {
         do{
             clearBoard();
             display();
+            // declaration variable 
             int plays = 0;
-            for (int turns = 0; turns < 9; turns++)
+            for (int turns = 0; turns < 9; turns++) // turns = 0,1,2,3,4,5,6,7,8
             {
-                if (plays % 2 == 0)
+                if (plays % 2 == 0) // plays = 0 
                 {
                     playerMove = Name1;
                     playerString = P1;
@@ -80,7 +83,7 @@ public class Main {
                     playerString = P2;
                 }
 
-                System.out.println("Its " + playerMove + "'s turn!" );
+                System.out.println("Its " + playerMove + "'s turn!" ); // display announcing turns 
 
                 do {
                     row = SafeInput.getRangedInt(in, "Enter your row coordinate", 3, 1) - 1;
@@ -114,6 +117,7 @@ public class Main {
     // create a new private static class
     private static void display()
     {
+        // decalration of variable 
         String displayBoard = "";
         for (int r = 0; r < ROW; r++) // if r =  1 or = 2
         {
